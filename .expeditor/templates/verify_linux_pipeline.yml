@@ -15,6 +15,8 @@
   - label: "[@@plan@@] :linux: :habicat: Build with DO_CHECK=true"
     command:
       - bin/ci/verify-pr-build.sh @@plan@@
+    soft_fail:
+      - exit_status: "*"
     expeditor:
       executor:
         docker:
