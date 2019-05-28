@@ -17,8 +17,7 @@
       - bin/ci/verify-pr-build.sh @@plan@@
     soft_fail:
       - exit_status: "*"
-    expeditor:
-      executor:
-        docker:
-          privileged: true
+    retry:
+      automatic:
+        limit: 0
     timeout_in_minutes: 60
