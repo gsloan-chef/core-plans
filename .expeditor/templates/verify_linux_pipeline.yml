@@ -17,7 +17,5 @@
       - bin/ci/verify-pr-build.sh @@plan@@
     soft_fail:
       - exit_status: "*"
-    retry:
-      automatic:
-        limit: 0
+    retry: "manual"
     timeout_in_minutes: 60
