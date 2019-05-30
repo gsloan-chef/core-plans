@@ -37,4 +37,7 @@ kill_rabbit() {
 trap "kill_rabbit" INT TERM HUP ABRT QUIT
 
 # We do NOT call exec here, as we trap signals and kill rabbit in this script
+echo "starting server"
 rabbitmq-server 2>&1
+echo "display cluster status"
+rabbitmqctl cluster_status

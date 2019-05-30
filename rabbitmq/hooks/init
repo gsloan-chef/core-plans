@@ -1,5 +1,7 @@
 #!/bin/sh
-
 exec 2>&1
-
+echo "begin init"
 mkdir -p {{pkg.svc_var_path}}/logs
+echo "linking erlang"
+ln -s {{pkgPathFor "core/erlang"}}/bin/erl /usr/bin/erl
+echo "finish init"
